@@ -18,14 +18,14 @@ public class MainMenuScript : MonoBehaviour
 
     private void Start()
     {
-        startBtn.onClick.AddListener(StarGame);
+        startBtn.onClick.AddListener(StartGame);
         quitBtn.onClick.AddListener(QuitGame);
 
         truckRb = truck.GetComponent<Rigidbody>();
 
     }
 
-    private void StarGame()
+    private void StartGame()
     {
         truckRb.constraints &= ~RigidbodyConstraints.FreezePositionZ;
         truckRb.AddRelativeForce(new Vector3(0, 0, 2_000f), ForceMode.Impulse);
@@ -33,14 +33,7 @@ public class MainMenuScript : MonoBehaviour
         float delay = 0.5f;
         transition.FadeOut(1f, delay);
 
-        StartCoroutine(ChangeScene(1, 1f));
-    }
-
-    private IEnumerator ChangeScene(int sceneIndex, float delaySeconds=0f)
-    {
-        yield return new WaitForSeconds(delaySeconds);
-        
-        SceneManager.LoadScene(sceneIndex);
+        StartCoroutine(GameManager.ChangeSceneWithDelay(SceneType.FirstLevel, 1f));
     }
 
     private void QuitGame()

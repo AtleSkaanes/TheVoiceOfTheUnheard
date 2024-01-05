@@ -13,7 +13,7 @@ public class ObjectiveLocation : MonoBehaviour
     [SerializeField] private float inBufferSize = 5f;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -29,7 +29,7 @@ public class ObjectiveLocation : MonoBehaviour
 
     public float Distance(Vector3 otherPosition)
     {
-        return Vector3.Distance(position, otherPosition);
+        return Vector3.Distance(transform.position, otherPosition);
     }
 
     public bool AtLocation(Vector3 other)

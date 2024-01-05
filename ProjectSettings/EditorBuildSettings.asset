@@ -9,10 +9,16 @@ EditorBuildSettings:
     path: Assets/Scenes/main-menu-code.unity
     guid: 10ea3529bd2bea04db6077bca1b0ac51
   - enabled: 1
-    path: Assets/Scenes/Objective-Locations.unity
-    guid: ffcf9309903b57f4288f8863b2351482
+    path: Assets/Scenes/Diary.unity
+    guid: b58e25a56512b45469f4921f5c2f4620
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/Scenes/GUI.unity
+    guid: 3c840148d9548834bb63eea39e9fe299
+  - enabled: 1
+    path: Assets/Scenes/GUI 1.unity
+    guid: 8b90febd0328ce144a2521b5162fb235
+  - enabled: 1
+    path: Assets/Scenes/GUI 2.unity
+    guid: 550c1d67d6719a246a5aa2c561fc643d
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
