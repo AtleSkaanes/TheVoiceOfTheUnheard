@@ -507,6 +507,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 376099331}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &386163657 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8155127001759623610, guid: 46a54dc2db0412840a24a2376c6aab15, type: 3}
+  m_PrefabInstance: {fileID: 5658357310517450538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &423503776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -741,6 +746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 653260038}
   - component: {fileID: 653260036}
+  - component: {fileID: 653260039}
   m_Layer: 0
   m_Name: Post-process Volume
   m_TagString: Untagged
@@ -780,6 +786,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &653260039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653260035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f60b324eec3a44094c31e7c9c8ef44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rain: {fileID: 386163657}
 --- !u!1 &669447089
 GameObject:
   m_ObjectHideFlags: 3
@@ -3678,22 +3697,6 @@ PrefabInstance:
       propertyPath: metersRematiningTxt
       value: 
       objectReference: {fileID: 816915094}
-    - target: {fileID: 2632029798210510893, guid: 46a54dc2db0412840a24a2376c6aab15, type: 3}
-      propertyPath: sliderHighlightColor.a
-      value: 0.6666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 2632029798210510893, guid: 46a54dc2db0412840a24a2376c6aab15, type: 3}
-      propertyPath: sliderHighlightColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2632029798210510893, guid: 46a54dc2db0412840a24a2376c6aab15, type: 3}
-      propertyPath: sliderHighlightColor.g
-      value: 0.8607639
-      objectReference: {fileID: 0}
-    - target: {fileID: 2632029798210510893, guid: 46a54dc2db0412840a24a2376c6aab15, type: 3}
-      propertyPath: sliderHighlightColor.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3810339125234352974, guid: 46a54dc2db0412840a24a2376c6aab15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.4

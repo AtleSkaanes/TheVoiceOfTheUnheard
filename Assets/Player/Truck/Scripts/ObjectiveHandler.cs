@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class ObjectiveHandler : MonoBehaviour
 {
-    [Header("UI elements")]
+    [Header("UI Components")]
     [SerializeField] private Slider progressBarSlider;
     [SerializeField] private TextMeshProUGUI metersRematiningTxt;
     [SerializeField] private GameObject pressEBox;
     [SerializeField] private Transition transition;
 
-    [Header("UI properties")]
+    [Header("UI Properties")]
     [SerializeField] private Color sliderHighlightColor;
 
     private Color sliderNormalColor;
@@ -63,8 +63,8 @@ public class ObjectiveHandler : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            transition.FadeOut(1f, 0.5f);
-            StartCoroutine(GameManager.ChangeSceneWithDelay(SceneType.Diary, 1f));
+            transition.FadeOut();
+            StartCoroutine(GameManager.ChangeSceneWithDelay(SceneType.Diary, 0.5f));
         }
     }
 }

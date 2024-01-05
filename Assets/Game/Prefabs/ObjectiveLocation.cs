@@ -12,7 +12,6 @@ public class ObjectiveLocation : MonoBehaviour
 
     [SerializeField] private float inBufferSize = 5f;
 
-    // Start is called before the first frame update
     void Awake()
     {
         if (Instance != null && Instance != this)
