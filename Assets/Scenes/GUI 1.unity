@@ -741,6 +741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 653260038}
   - component: {fileID: 653260036}
+  - component: {fileID: 653260039}
   m_Layer: 0
   m_Name: Post-process Volume
   m_TagString: Untagged
@@ -780,6 +781,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &653260039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653260035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f60b324eec3a44094c31e7c9c8ef44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rain: {fileID: 5658357310517450539}
 --- !u!1 &669447089
 GameObject:
   m_ObjectHideFlags: 3
@@ -3743,6 +3757,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46a54dc2db0412840a24a2376c6aab15, type: 3}
+--- !u!198 &5658357310517450539 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8155127001759623610, guid: 46a54dc2db0412840a24a2376c6aab15, type: 3}
+  m_PrefabInstance: {fileID: 5658357310517450538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
