@@ -32,6 +32,17 @@ public class ObjectiveHandler : MonoBehaviour
         float dist = ObjectiveLocation.Instance.Distance(transform.position);
         HandleDistanceUI(dist);
         HandleNearTargetActions(dist);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            transition.FadeOut();
+            StartCoroutine(GameManager.ChangeSceneWithDelay(SceneType.MainMenu, 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            transition.FadeOut();
+            StartCoroutine(GameManager.ChangeSceneWithDelay(SceneType.CurrentLevel, 0.5f));
+        }
     }
 
     void HandleDistanceUI(float dist)

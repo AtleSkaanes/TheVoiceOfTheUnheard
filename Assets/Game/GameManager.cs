@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public enum SceneType
 {
+    CurrentLevel,
     NextLevel,
     PrevLevel,
     FirstLevel,
@@ -14,6 +15,7 @@ public enum SceneType
 
 public static class GameManager
 {
+    public const int LevelCount = 6;
     public static int currentLevelIndex = 0;
     private static int levelSceneOffset = 2;
 
@@ -48,9 +50,19 @@ public static class GameManager
             case SceneType.Diary:
                 SceneManager.LoadScene(diarySceneIndex);
                 break;
+            case SceneType.CurrentLevel:
+                SceneManager.LoadScene(currentLevelIndex + levelSceneOffset);
+                break;
             case SceneType.NextLevel:
-                SceneManager.LoadScene(currentLevelIndex + levelSceneOffset + 1);
-                currentLevelIndex++;
+                if (currentLevelIndex + 2 != LevelCount) {
+                    SceneManager.LoadScene(currentLevelIndex + levelSceneOffset + 1);
+                    currentLevelIndex++;
+                }
+                else
+                {
+                    SceneManager.LoadScene(mainMenuSceneIndex);
+                }
+
                 break;
             case SceneType.PrevLevel:
                 SceneManager.LoadScene(currentLevelIndex + levelSceneOffset - 1);

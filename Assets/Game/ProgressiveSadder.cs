@@ -36,7 +36,7 @@ public class ProgressiveSadder : MonoBehaviour
         {
             rainEmission = rain.emission;
             rainEmission.enabled = true;
-            rainEmission.rateOverTime = 300 * lvlIndex;
+            rainEmission.rateOverTime= 50 * lvlIndex;
         }
     }
 }
